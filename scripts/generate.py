@@ -140,14 +140,14 @@ def generate(today, out, future=()):
         thursday=monday-timedelta(days=4)
         friday=monday+timedelta(days=4)
         week=f"{monday.isoformat()} to {friday.isoformat()}"
-        city += event("glendale-placement-"+monday.isoformat(),thursday,
+        city.append(event("glendale-placement-"+monday.isoformat(),thursday,
             "Glendale bulk trash — placement opens (Section 4)",
             f"Section 4 collection week: {week}. Earliest placement is Thursday. All items must be out by 6:00 AM Monday, BEFORE the 8 AM calendar event. Confirm your street is Section 4. Official source: {GLENDALE}",
-            GLENDALE,stamp,"-P1D")
-        city += event("glendale-collection-"+monday.isoformat(),monday,
+            GLENDALE,stamp,"-P1D")))
+        city.append(event("glendale-collection-"+monday.isoformat(),monday,
             "Glendale bulk trash — collection week (Section 4)",
             f"Official section 4 collection week: {week}. Collection day and hour are not guaranteed. Placement deadline: 6 AM Monday (before this 8 AM display slot). Official source: {GLENDALE}",
-            GLENDALE,stamp,"-P1D")
+            GLENDALE,stamp,"-P1D")))
     # If no future city weeks are known, publish informational monthly reminders,
     # never placeholders pretending to be actual pickups.
     if not any(monday >= today for monday in upcoming):
@@ -155,27 +155,27 @@ def generate(today, out, future=()):
             v=today.year*12+today.month-1+offset
             y,m=divmod(v,12)
             d=date(y,m+1,15)
-            city += event("glendale-schedule-check-"+d.isoformat(),d,
+            city.append(event("glendale-schedule-check-"+d.isoformat(),d,
                 "Glendale — check for published future bulk trash schedule",
                 f"REMINDER ONLY — not a confirmed collection date. No official upcoming section 4 schedule is verified. Check: {GLENDALE}",
-                GLENDALE,stamp,"-P1D")
+                GLENDALE,stamp,"-P1D")))
     peoria=[]
     for year in range(max(today.year,2027),max(today.year,2027)+4):
         for month in (1,7):
             day=date(year,month,15)
             if day < today-timedelta(days=45):
                 continue
-            peoria += event("aloravita-book-"+day.isoformat(),day,
+            peoria.append(event("aloravita-book-"+day.isoformat(),day,
                 "Aloravita — consider booking Peoria bulk trash",
                 f"BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides appointment-only service to eligible city solid-waste customers. Up to two free bookings per calendar year. Verify home eligibility, request a pickup, and wait for confirmation. {PEORIA} | 623-773-7890",
-                PEORIA,stamp,"-P7D")
+                PEORIA,stamp,"-P7D"))
     names=[("glendale-bulk-trash.ics","Glendale Bulk Trash Section 4",city),
            ("aloravita-bulk-trash.ics","Aloravita Peoria Booking Reminders",peoria),
            ("home-bulk-trash.ics","Home Bulk Trash Glendale and Aloravita",city+peoria)]
     out.mkdir(parents=True, exist_ok=True)
     for filename,label,events in names:
         (out/filename).write_bytes(serialize(label,events))
-        print(f"{filename}: {sum(x == 'BEGIN:VEVENT' for x in events)} events")
+        print(f"{filename}: {len(events)} events")
     return names
 
 if __name__=="__main__":

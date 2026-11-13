@@ -1,0 +1,273 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Arizona Bulk Trash Calendars//EN
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Home Bulk Trash Glendale and Aloravita
+X-WR-TIMEZONE:America/Phoenix
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:PT24H
+BEGIN:VTIMEZONE
+TZID:America/Phoenix
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0700
+TZNAME:MST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:glendale-placement-2026-11-23@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20261119T080000
+DTEND;TZID=America/Phoenix:20261119T090000
+SUMMARY:Glendale bulk trash — placement opens (Section 4)
+DESCRIPTION:Section 4 collection week: 2026-11-23 to 2026-11-27. Earliest p
+ lacement is Thursday. All items must be out by 6:00 AM Monday\, BEFORE the
+  8 AM calendar event. Confirm your street is Section 4. Official source: h
+ ttps://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/Bulk
+ -Trash
+URL:https://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/
+ Bulk-Trash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Glendale bulk trash — placement opens (Section 4)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:glendale-collection-2026-11-23@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20261123T080000
+DTEND;TZID=America/Phoenix:20261123T090000
+SUMMARY:Glendale bulk trash — collection week (Section 4)
+DESCRIPTION:Official section 4 collection week: 2026-11-23 to 2026-11-27. C
+ ollection day and hour are not guaranteed. Placement deadline: 6 AM Monday
+  (before this 8 AM display slot). Official source: https://www.glendaleaz.
+ gov/Community/City-Services/Trash-and-Recycling/Bulk-Trash
+URL:https://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/
+ Bulk-Trash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Glendale bulk trash — collection week (Section 4)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:glendale-placement-2026-12-28@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20261224T080000
+DTEND;TZID=America/Phoenix:20261224T090000
+SUMMARY:Glendale bulk trash — placement opens (Section 4)
+DESCRIPTION:Section 4 collection week: 2026-12-28 to 2027-01-01. Earliest p
+ lacement is Thursday. All items must be out by 6:00 AM Monday\, BEFORE the
+  8 AM calendar event. Confirm your street is Section 4. Official source: h
+ ttps://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/Bulk
+ -Trash
+URL:https://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/
+ Bulk-Trash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Glendale bulk trash — placement opens (Section 4)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:glendale-collection-2026-12-28@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20261228T080000
+DTEND;TZID=America/Phoenix:20261228T090000
+SUMMARY:Glendale bulk trash — collection week (Section 4)
+DESCRIPTION:Official section 4 collection week: 2026-12-28 to 2027-01-01. C
+ ollection day and hour are not guaranteed. Placement deadline: 6 AM Monday
+  (before this 8 AM display slot). Official source: https://www.glendaleaz.
+ gov/Community/City-Services/Trash-and-Recycling/Bulk-Trash
+URL:https://www.glendaleaz.gov/Community/City-Services/Trash-and-Recycling/
+ Bulk-Trash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Glendale bulk trash — collection week (Section 4)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2027-01-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20270115T080000
+DTEND;TZID=America/Phoenix:20270115T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2027-07-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20270715T080000
+DTEND;TZID=America/Phoenix:20270715T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2028-01-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20280115T080000
+DTEND;TZID=America/Phoenix:20280115T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2028-07-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20280715T080000
+DTEND;TZID=America/Phoenix:20280715T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2029-01-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20290115T080000
+DTEND;TZID=America/Phoenix:20290115T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2029-07-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20290715T080000
+DTEND;TZID=America/Phoenix:20290715T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2030-01-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20300115T080000
+DTEND;TZID=America/Phoenix:20300115T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aloravita-book-2030-07-15@arizona-bulk-trash
+DTSTAMP:20261113T203828Z
+LAST-MODIFIED:20261113T203828Z
+DTSTART;TZID=America/Phoenix:20300715T080000
+DTEND;TZID=America/Phoenix:20300715T090000
+SUMMARY:Aloravita — consider booking Peoria bulk trash
+DESCRIPTION:BOOKING REMINDER ONLY — NOT A PICKUP DATE. Peoria provides ap
+ pointment-only service to eligible city solid-waste customers. Up to two f
+ ree bookings per calendar year. Verify home eligibility\, request a pickup
+ \, and wait for confirmation. https://www.peoriaaz.gov/bulktrash | 623-773
+ -7890
+URL:https://www.peoriaaz.gov/bulktrash
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Aloravita — consider booking Peoria bulk trash
+END:VALARM
+END:VEVENT
+END:VCALENDAR

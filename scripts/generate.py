@@ -143,11 +143,11 @@ def generate(today, out, future=()):
         city.append(event("glendale-placement-"+monday.isoformat(),thursday,
             "Glendale bulk trash — placement opens (Section 4)",
             f"Section 4 collection week: {week}. Earliest placement is Thursday. All items must be out by 6:00 AM Monday, BEFORE the 8 AM calendar event. Confirm your street is Section 4. Official source: {GLENDALE}",
-            GLENDALE,stamp,"-P1D")))
+            GLENDALE,stamp,"-P1D"))
         city.append(event("glendale-collection-"+monday.isoformat(),monday,
             "Glendale bulk trash — collection week (Section 4)",
             f"Official section 4 collection week: {week}. Collection day and hour are not guaranteed. Placement deadline: 6 AM Monday (before this 8 AM display slot). Official source: {GLENDALE}",
-            GLENDALE,stamp,"-P1D")))
+            GLENDALE,stamp,"-P1D"))
     # If no future city weeks are known, publish informational monthly reminders,
     # never placeholders pretending to be actual pickups.
     if not any(monday >= today for monday in upcoming):
@@ -158,7 +158,7 @@ def generate(today, out, future=()):
             city.append(event("glendale-schedule-check-"+d.isoformat(),d,
                 "Glendale — check for published future bulk trash schedule",
                 f"REMINDER ONLY — not a confirmed collection date. No official upcoming section 4 schedule is verified. Check: {GLENDALE}",
-                GLENDALE,stamp,"-P1D")))
+                GLENDALE,stamp,"-P1D"))
     peoria=[]
     for year in range(max(today.year,2027),max(today.year,2027)+4):
         for month in (1,7):

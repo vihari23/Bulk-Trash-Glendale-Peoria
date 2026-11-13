@@ -1,0 +1,71 @@
+name: Publish Home Bulk Trash Calendars
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: home-bulk-trash-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test calendars
+        run: python -m unittest discover -s tests -v
+      - name: Generate from official source
+        run: python scripts/generate.py
+      - name: Validate ICS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for name in ("glendale-bulk-trash.ics","aloravita-bulk-trash.ics","home-bulk-trash.ics"):
+              s=(Path("site")/name).read_bytes()
+              assert s.startswith(b"BEGIN:VCALENDAR\r\n")
+              assert s.endswith(b"END:VCALENDAR\r\n")
+              assert s.count(b"BEGIN:VEVENT") > 0
+              assert all(len(x)<=75 for x in s.split(b"\r\n"))
+              print(name, s.count(b"BEGIN:VEVENT"))
+          PY
+      - name: Commit updated public subscription files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/*.ics
+          if ! git diff --cached --quiet; then
+            git commit -m "Update public bulk trash subscription files [skip ci]"
+            git push origin HEAD:main
+          fi
+      - name: Detect optional Pages
+        id: pages_check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Pages not enabled; raw GitHub ICS feed is already public"
+          fi
+      - name: Configure Pages
+        if: steps.pages_check.outputs.enabled == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        if: steps.pages_check.outputs.enabled == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy Pages
+        if: steps.pages_check.outputs.enabled == 'true'
+        uses: actions/deploy-pages@v4

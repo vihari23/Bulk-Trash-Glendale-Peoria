@@ -7,6 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import re
 from urllib.request import Request, urlopen
 
@@ -181,7 +182,8 @@ def generate(today, out, future=()):
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("--offline",action="store_true")
-    p.add_argument("--date",type=date.fromisoformat,default=datetime.now().date())
+    # Phoenix date, not the runner's UTC date (evening backup runs cross UTC midnight).
+    p.add_argument("--date",type=date.fromisoformat,default=datetime.now(ZoneInfo(TIMEZONE)).date())
     p.add_argument("--out",type=Path,default=ROOT/"site")
     args=p.parse_args()
     future=[] if args.offline else fetch_future(args.date.year+1)+fetch_future(args.date.year+2)
